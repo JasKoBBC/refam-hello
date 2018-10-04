@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'cd ./refam-hello/lambda/custom'
-                sh 'npm init'
+                sh 'npm install'
             }
         }
         stage('Test') {
