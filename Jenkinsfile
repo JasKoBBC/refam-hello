@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'cd ./refam-hello/lambda/custom'
+                sh 'pwd'
                 sh 'npm install'
             }
         }
@@ -13,6 +14,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'cd ./refam-hello/lambda/custom'
+                sh 'pwd'
                 sh 'npm test'
             }
         }
