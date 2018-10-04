@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                cd ./lambda/custom
-                npm init
+                sh 'cd ./lambda/custom'
+                sh 'npm init'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                npm test
+                sh 'npm test'
             }
         }
         stage('Deploy') {
