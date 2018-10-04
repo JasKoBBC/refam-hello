@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 dir ('refam-hello/lambda/custom'){
                   sh 'pwd'
-                  sh 'sudo npm install'
+                  sh 'npm install'
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
                 echo 'Testing..'
                 dir ('refam-hello/lambda/custom'){
                   sh 'pwd'
-                  sh 'sudo npm test'
+                  sh 'npm test'
                 }
             }
         }
