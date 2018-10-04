@@ -12,6 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh 'cd ./refam-hello/lambda/custom'
                 sh 'npm test'
             }
         }
