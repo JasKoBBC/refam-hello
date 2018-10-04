@@ -5,17 +5,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'cd refam-hello/lambda/custom'
-                sh 'pwd'
-                sh 'npm install'
+                dir ('refam-hello/lambda/custom'){
+                  sh 'sudo pwd'
+                  sh 'sudo npm install'
+                }
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'cd refam-hello/lambda/custom'
-                sh 'pwd'
-                sh 'npm test'
+                dir ('refam-hello/lambda/custom'){
+                  sh 'sudo pwd'
+                  sh 'sudo npm test'
+                }
             }
         }
         stage('Deploy') {
