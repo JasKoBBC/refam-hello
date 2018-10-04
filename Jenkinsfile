@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'cd ./refam-hello/lambda/custom'
+                sh 'cd refam-hello/lambda/custom'
                 sh 'pwd'
                 sh 'npm install'
             }
@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'cd ./refam-hello/lambda/custom'
+                sh 'cd refam-hello/lambda/custom'
                 sh 'pwd'
                 sh 'npm test'
             }
